@@ -1,3 +1,6 @@
+# Esercizio CheckTelefono Morelli Giovanni 5H
+
+### Descrizione:
 Ricevuto come parametro un vettore di string, ritornare al chiamante la prima stringa che assomiglia molto ad un numero di telefono cellulare italiano ovvero:
 
 che inizia con +39 (esattamente lungo 13)
@@ -14,3 +17,12 @@ Se arriva "", "05417723", "+391231231234" Tornare "+391231231234"
 Se arriva "3", "05417723", "00391231231230" Tornare ""
 
 etc
+
+### Svolgimento:
+
+Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check" che riceve come imput i numeri di telefono
+```
+public static class Telefono
+{
+    public static string Check(string[] vettore)
+```
