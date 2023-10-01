@@ -20,14 +20,15 @@ etc
 
 ### Svolgimento:
 
-Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check" che riceve come imput i numeri di telefono:
+Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check":
 ```
 public static class Telefono
 {
     public static string Check(string[] vettore)
 ```
+Questo è il metodo principale che prende un vettore (array) di stringhe come parametro e restituisce una stringa. Il suo scopo è trovare la prima stringa nel vettore che rappresenta un numero di telefono italiano valido.
 
-Grazie al foreach controlliamo in ogni numero di telefono contenuto nel vettore la sua lunghezza e con che numeri inizia:
+Grazie al ciclo foreach controlliamo ogni numero di telefono contenuto nel vettore
 ```
 foreach (var numero in vettore)
         {
@@ -36,6 +37,7 @@ foreach (var numero in vettore)
                 return numero;
             }
 ```
+
 Per il controllo della validità del numero occorre la seguente funzione:
 ```
 private static bool IsValidNumeroTelefono(string numero)
