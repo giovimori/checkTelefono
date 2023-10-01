@@ -20,9 +20,30 @@ etc
 
 ### Svolgimento:
 
-Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check" che riceve come imput i numeri di telefono
+Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check" che riceve come imput i numeri di telefono:
 ```
 public static class Telefono
 {
     public static string Check(string[] vettore)
 ```
+
+Grazie al foreach controlliamo in ogni numero di telefono contenuto nel vettore la sua lunghezza e con che numeri inizia:
+```
+foreach (var numero in vettore)
+        {
+            if (IsValidNumeroTelefono(numero))
+            {
+                return numero;
+            }
+```
+Per il controllo della validità del numero occorre la seguente funzione:
+```
+private static bool IsValidNumeroTelefono(string numero)
+    {
+        return (numero.Length == 13 && (numero.StartsWith("+39") || numero.StartsWith("0039"))) ||
+               (numero.Length == 14 && numero.StartsWith("0039")) ||
+               (numero.Length == 10 && numero.StartsWith("3"));
+```
+Se troviamo un numero di telefono italiano valido, lo restituiamo come risultato della funzione Check.
+
+Se non troviamo nessun numero di telefono italiano valido, restituiamo una stringa vuota come risultato.
