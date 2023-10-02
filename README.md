@@ -20,7 +20,7 @@ etc
 
 ### Svolgimento:
 
-Creiamo una classe chiamata "Telefono" dove all'interno si trova il metodo "Check":
+Apriamo il progetto dezippato su Visual Studio Code e creiamo una classe  chiamata "Telefono" dove all'interno si trova il metodo "Check":
 ```
 public static class Telefono
 {
